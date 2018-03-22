@@ -1,6 +1,10 @@
 .navbar{
     border-bottom: 1px solid #e3e3e3;
 }
+#logo{
+    font-size: 200%;
+    font-weight: 500;
+}
 
 .site{
  max-width:900px;   
@@ -14,11 +18,10 @@
     width: 70%;
 }
 #About p{
-    vertical-align: middle;
-    height: 40px;
-    width: 100%;
+    height: auto;
     line-height: 40px;
     font-weight: 500;
+    font-size: 130%
 }
 main{
     display: block;
