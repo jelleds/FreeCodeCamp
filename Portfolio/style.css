@@ -1,3 +1,26 @@
-body{
-    
+.navbar{
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.site{
+ max-width:900px;   
+}
+#About{
+    margin:90px 0;
+}
+#About img{
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+}
+#About p{
+    vertical-align: middle;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    font-weight: 500;
+}
+main{
+    display: block;
+    margin: 0 auto;
 }
