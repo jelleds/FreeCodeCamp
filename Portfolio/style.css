@@ -1,0 +1,141 @@
+:root{
+    --header-grey:rgb(206, 206, 206);
+    --grey-bg: rgb(238, 238, 238);
+}
+
+html{
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(3, 1fr) );
+    grid-template-rows: repeat( auto-fit, minmax(auto, 1fr) );
+    width: 100%;
+}
+
+/*header*/
+header{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    background: var(--header-grey);
+    position:fixed;
+    width: 100vw;
+}
+   
+        nav ul{
+            display: flex;
+            justify-content: flex-end;
+            align-content: center;
+            margin-right: 30px;
+        }
+            nav ul li{
+                list-style: none;
+                display: inline-block;
+                margin-right: 50px;
+            }
+                nav ul li a{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 16px;
+                }
+
+/*Main*/    
+main{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    height: auto;
+}
+/*Intro*/
+    section#intro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: var(--grey-bg);
+        text-align: center;
+    }
+        section#intro h1{
+            font-size: 32px;
+            margin: 0;
+        }
+        section#intro p{
+            display: block;
+            text-transform: uppercase;
+        }
+/*About*/
+    section#about{
+        text-align: center;
+        padding: 80px 0;
+    }
+            div#info h2{
+                font-size: 24px;
+                margin-bottom: 80px;
+            }
+            div#info p{
+                margin: 0 auto;
+                width: 30%;
+            }
+        div#skills{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            margin-top: 80px;
+        }
+            div#skills .skill img{
+                width: 50%;
+            }
+
+/*Projects*/    
+        section#projects{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+            grid-template-rows: auto 1fr;
+            justify-items: center;
+            grid-row-gap: 30px;
+            background: var(--grey-bg);
+        }
+            section#projects h2{
+                grid-column: 1/-1;
+                grid-row: 1/2;
+                margin: 80px 0 50px 0;
+                font-size: 24px;
+            }
+            section#projects{
+                grid-column: 1/-1;
+                grid-row: 2/-1;
+            }
+            div.project{
+                background: white;
+            }
+                div.project img{
+                    width: 100%;
+                }
+                div.project img:hover{
+                    transform: scale(1.1);
+                    transition-duration: 0.4s;
+                }
+                div.project p{
+                    text-align: center;
+                    margin-top: 30px;
+                }
+
+/*Footer*/
+footer{
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    height: 30px;
+    background: var(--header-grey);
+    padding: 15px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:12px;
+}
+
