@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title></title>
+</head>
+
+<body>
+	<h1 id="title">Freecodecamp Survey Form</h1>
+	<p>This is a survey form I created for FreeCodeCamp</p>
+	
+	<form id="survey-form">
+		<label id="name-label">*Name: </label>
+		<input type="text" name="name" id="name" placeholder="Enter your name" required> <br>
+
+		<label id="email-label">*Email: </label>
+		<input type="email" name="email" id="email" placeholder="Enter your email" required> <br>
+
+		<label id="number-label">Age: </label>
+		<input type="number" name="age" id="number" min="1" placeholder="Enter your age"> <br>
+
+		<label id="dropdown-label">What do you like the most?</label>
+		<select id="dropdown">
+			<option value="bootstrap">Bootstrap</option>
+			<option value="cssgrid">CSS Grid</option>
+			<option value="flexbox">Flexbox</option>
+		</select><br>
+
+		<input type="radio" name="male">Male
+		<input type="radio" name="female">Female
+		<br>
+		<input type="checkbox" name="css" value="css">Css
+		<input type="checkbox" name="css" value="html">Html
+		<input type="checkbox" name="css" value="javascript">Javascript
+		<br>
+		<label>Any Comments?</label>
+		<textarea></textarea> <br>
+
+		<button id="submit">Submit</button>
+
+	</form>
+</body>
+
+</html>

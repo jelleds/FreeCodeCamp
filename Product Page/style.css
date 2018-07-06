@@ -1,0 +1,165 @@
+html{
+	font-family: sans-serif;
+}
+.container{
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 20vh auto 10vh;
+	grid-gap: 5vh;
+}
+
+nav{
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	justify-content: center;
+}
+.menu{
+	grid-column: 2/-1;
+}
+
+header{
+	position: fixed;
+	height: 20vh;
+	background: white;
+}
+
+main{
+	grid-row: 2/2;
+
+}
+#features{
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 5vh 0px;
+	margin-top: 10vh;
+}
+.icon{
+	grid-column: 1/2;
+	justify-content: center;
+}
+.icon img{
+	width: 30%;
+}
+.content{
+	grid-column: 2/-1;
+}
+
+footer{
+	grid-row: 3/4;
+	
+}
+
+#header-img{
+	width: 50%;
+}
+/*menu items*/
+	nav ul{
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	nav ul li{
+		display: inline;
+		margin-right: 60px;
+	}
+	nav ul li a{
+		text-decoration: none;
+		color:black;
+		font-size: 20px;
+	}
+	nav ul li a:hover{
+		text-decoration: none;
+		color:crimson;
+	}
+
+
+h1,form{
+	text-align: center;
+}
+/*form*/
+	#email{
+		width: 20%;
+		height: 20px;
+		padding: 5px;
+	}
+	#submit{
+		background: crimson;
+		color: white;
+		padding: 10px 20px;
+		font-size: 20px;
+		margin-top: 4vh;
+
+	}
+	#submit:hover{
+		background: white;
+		color: crimson;
+	}
+
+#howitworks{
+	display: flex;
+	justify-content: center;
+	margin:10vh 0;
+}
+
+#pricing{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	text-align: center; 
+	grid-gap: 0 2vw;
+}
+#pricing .item{
+	border: 1px solid black;
+	padding-bottom: 20px;
+}
+.item h3{
+	background: crimson;
+	color: white;
+	margin-top: 0px;
+	padding: 12px 0px;
+}
+.item span,
+.item button,
+.item p{
+	padding: 0 50px;
+}
+.item button{
+	padding: 10px 30px;
+	background: white;
+	color: crimson;
+}
+
+footer{
+	background:grey;
+	display: grid;
+	grid-template-columns: 10fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	text-align: right;
+}
+footer ul{
+	grid-column: 11/12;
+	grid-row: 1/2;
+}
+footer span{
+	grid-column: 11/12;
+	grid-row: 2/3;
+	margin-right: 60px;
+}
+
+	footer ul{
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	footer ul li{
+		display: inline;
+		margin-right: 60px;
+	}
+	footer ul li a{
+		text-decoration: none;
+		color:black;
+		font-size: 20px;
+	}
+
