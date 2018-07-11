@@ -1,6 +1,9 @@
 :root{
-    --header-grey:rgb(206, 206, 206);
     --grey-bg: rgb(238, 238, 238);
+    --bubble-green: #D7FF14;
+    --powder-white:#FCFFF7;
+    --sea-green: #21A0A0;
+    --rain-forest-green: #046865;
 }
 
 html{
@@ -8,6 +11,7 @@ html{
     padding: 0;
     margin: 0;
     font-size: 16px;
+    background: var(--powder-white);
 }
 body{
     padding: 0;
@@ -19,20 +23,28 @@ body{
     grid-template-rows: repeat( auto-fit, minmax(auto, 1fr) );
     width: 100%;
 }
+section{
+    padding: 80px 0;
+}
+h2{
+    font-size: 2rem;
+}
 
 /*header*/
 header{
     grid-column: 1/-1;
     grid-row: 1/2;
-    background: var(--header-grey);
+    background: var(--rain-forest-green);
     position:fixed;
-    width: 100vw;
+    width: 100%;
+
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
    
         nav ul{
-            display: flex;
-            justify-content: flex-end;
-            align-content: center;
             margin-right: 30px;
         }
             nav ul li{
@@ -42,8 +54,8 @@ header{
             }
                 nav ul li a{
                     text-decoration: none;
-                    color: black;
-                    font-size: 16px;
+                    color: white;
+                    font-size: 1.2rem;
                 }
 
 /*Main*/    
@@ -58,25 +70,31 @@ main{
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background: var(--grey-bg);
+        background: var(--bubble-green);
         text-align: center;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 80% 75%, 55% 100%, 59% 75%, 0% 75%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 80% 75%, 55% 100%, 59% 75%, 0% 75%);
+
     }
+        div.intro-text{
+            margin-bottom: 30vh;
+        }
         section#intro h1{
-            font-size: 32px;
+            font-size: 5rem;
             margin: 0;
         }
         section#intro p{
             display: block;
             text-transform: uppercase;
+            font-size: 2rem;
         }
 /*About*/
     section#about{
         text-align: center;
-        padding: 80px 0;
+        padding: 40px 0 80px 0;
     }
             div#info h2{
-                font-size: 24px;
-                margin-bottom: 80px;
+                margin-bottom: 40px;
             }
             div#info p{
                 margin: 0 auto;
@@ -85,10 +103,13 @@ main{
         div#skills{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            grid-row-gap: 5vh;
             margin-top: 80px;
+            justify-items: center;
+            align-items: center;
         }
-            div#skills .skill img{
-                width: 50%;
+            div#skills img{
+                width: 30%;
             }
 
 /*Projects*/    
@@ -96,46 +117,101 @@ main{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
             grid-template-rows: auto 1fr;
+            grid-column-gap: 50px;
             justify-items: center;
             grid-row-gap: 30px;
-            background: var(--grey-bg);
+            background: var(--sea-green);
+            color: white;
         }
             section#projects h2{
                 grid-column: 1/-1;
                 grid-row: 1/2;
-                margin: 80px 0 50px 0;
-                font-size: 24px;
+                margin-bottom: 50px;
             }
             section#projects{
                 grid-column: 1/-1;
                 grid-row: 2/-1;
             }
             div.project{
-                background: white;
+                perspective: 900px;
+            }
+            div.project div{
+                transform: rotateY(-30deg) rotateX(10deg);
+                transition: 0.4s;
             }
                 div.project img{
                     width: 100%;
                 }
-                div.project img:hover{
+                div.project div:hover{
+                    transition: 0.4s ;
                     transform: scale(1.1);
-                    transition-duration: 0.4s;
                 }
                 div.project p{
                     text-align: center;
                     margin-top: 30px;
                 }
 
+/*Contact*/
+
+section#contact{
+    display: grid;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+    section#contact h2{
+        justify-self: center;
+        margin-bottom:40px;
+
+    }
+    section#contact form{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 30px;
+        z-index: 1;
+    }
+        form #email{
+            width: 100%;
+            height: 30px;
+            border: none;
+            border-bottom: 1px solid var(--grey-bg);
+            font-size: 1rem;
+            background: none;
+            font-family: monospace;
+        }
+        form #email:focus{
+            border:none;
+            outline-width: 0;
+            border-bottom:1px solid var(--bubble-green);
+        }
+        form #comment{
+            width: 500px;
+            height: 20vh;
+            border: 1px solid var(--grey-bg);
+            background: none;
+        }
+        form #comment:focus{
+            outline-width: 0;
+            border: 1px solid var(--bubble-green);
+        }
+        form button{
+            font-size: 1.5rem;
+            background: none;
+            width: 150px;
+            height: 40px;
+            font-family: monospace;
+        }
+
 /*Footer*/
 footer{
     grid-column: 1/-1;
     grid-row: 3/4;
     height: 30px;
-    background: var(--header-grey);
+    background:var(--rain-forest-green);
+    color: white;
     padding: 15px;
-    margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size:12px;
 }
-
