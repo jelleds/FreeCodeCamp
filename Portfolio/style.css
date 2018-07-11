@@ -200,6 +200,7 @@ section#contact{
             width: 150px;
             height: 40px;
             font-family: monospace;
+            border:1px solid var(--grey-bg);
         }
 
 /*Footer*/
